@@ -10,11 +10,6 @@ RSpec.describe 'Entities', type: :system do
     @group_entity = @entity.group_entities.create(group_id: @group.id, entity_id: @entity.id)
     sign_in @user
   end
-  bundle exec rspec
-  it 'should show correct entity ' do
-    visit group_entities_path(@group)
-    expect(page).to have_content(@entity.name)
-  end
 
   it 'should have the correct amount' do
     visit group_entities_path(@group)
