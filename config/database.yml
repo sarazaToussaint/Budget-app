@@ -9,8 +9,8 @@ default: &default
 development:
   <<: *default
   database: budgetify_development
-  username: postgres
-  password: 123456789
+  # username: postgres
+  # password: 123456789
 
   host: localhost
 
@@ -21,8 +21,8 @@ development:
 test:
   <<: *default
   database: budgetify_test
-  username: postgres
-  password: 123456789
+  # username: postgres
+  # password: 123456789
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -46,6 +46,7 @@ test:
 
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: budgetify_production
   username: budgetify_production_user
-  password: <%= ENV["BUDGETIFY_DATABASE_PASSWORD"] %>
+  password: <%= ENV["BUDGETIFY_PRODUCTION_DATABASE_PASSWORD"] %>
