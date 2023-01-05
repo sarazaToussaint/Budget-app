@@ -47,5 +47,5 @@ test:
 production:
   <<: *default
   database: budgetify_production
-  username: budgetify
+  username: budgetify_production_user
   password: <%= ENV["BUDGETIFY_DATABASE_PASSWORD"] %>
