@@ -55,16 +55,7 @@ To run tests:
 - `bundle exec rspec` or
 - `rspec`
 
-### Deployment
-
-To deploy to Heroku:
-
-- `heroku create`
-- `git push heroku develop:main`
-- `heroku open`
-
 ## Author
-
 
 👤 **Toussaint Saraza**
 
